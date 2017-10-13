@@ -8,7 +8,7 @@ namespace Addresses.Models
     private int _number;
     private string _address;
     private int _id;
-    private static List<Contact> _instances = new List<Task> {};
+    private static List<Contact> _instances = new List<Contact> {};
 
     public Contact (string name, string number, string address)
     {
