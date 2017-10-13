@@ -39,5 +39,12 @@ namespace Addresses.Controllers
         return View();
       }
 
+      [HttpGet("AddressBook/Clear")]
+      public ActionResult ClearForms()
+      {
+        Contact.ClearAll();
+        return View();
+      }
+
    }
 }
