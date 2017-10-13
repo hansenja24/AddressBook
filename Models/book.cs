@@ -54,6 +54,18 @@ namespace Addresses.Models
     {
       return _id;
     }
+
+    public int NextId()
+    {
+      return _id + 1;
+    }
+
+    public int BackId()
+    {
+      return _id - 1;
+    }
+
+
     public static List<Contact> GetAll()
     {
       return _instances;

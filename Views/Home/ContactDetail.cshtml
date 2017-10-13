@@ -1,13 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
 <h1>@Model.GetName()</h1>
 
 <p>Phone Number: @Model.GetNumber()</p1>
 <p>Address: @Model.GetAddress()</p1>
 <br><br>
 
-<form action="/AddressBook" method="get">
-  <button type="submit">View Address Book</button>
+<form action="/AddressBook/@Model.NextId()" method = "get">
+  <button type="submit" class="btn btn-info">Next</button>
+</form>
+<br>
+<form action="/AddressBook/@Model.BackId()" method = "get">
+  <button type="submit" class="btn btn-info">Back</button>
 </form>
 
+
+<br>
+<form action="/AddressBook" method="get">
+  <button type="submit" class="btn btn-info">View Address Book</button>
+</form>
+<br>
 <form action="/AddressBook/New" method="get">
-  <button type="submit">View Address Book</button>
+  <button type="submit" class="btn btn-info">Add a New Address</button>
 </form>

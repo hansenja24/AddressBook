@@ -1,3 +1,7 @@
+@{
+  Layout = "_Layout";
+}
+
 <h1>Address Book</h1>
 @if (@Model.Count == 0)
 {
@@ -8,10 +12,11 @@
   <h3><a href='/AddressBook/@contact.GetId()'>@contact.GetName()</a></h3>
 }
 
+<br>
 <form action="/" method="get">
-  <button type="submit">Home</button>
+  <button type="submit" class="btn btn-info">Home</button>
 </form>
-
+<br>
 <form action="/AddressBook/Clear" method="post">
-  <button type="submit" name="button">Clear All Tasks</button>
+  <button type="submit" class="btn btn-info">Clear All Tasks</button>
 </form>

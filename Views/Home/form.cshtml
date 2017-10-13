@@ -1,15 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
 <h1>Add a Contact</h1>
 <p>Add a new contact here:</p>
-<form action="/AddressBook/New/Contact" method="pots">
+<form action="/AddressBook/New/Contact" method="post">
   <label for="name-contact">Name: </label>
+  <br>
   <input id="name-contact" name="name-contact" type="text">
+  <br>
   <label for="number-contact">Phone Number: </label>
+  <br>
   <input id="number-contact" name="number-contact" type="text">
+  <br>
   <label for="address-contact">Address: </label>
+  <br>
   <input id="address-contact" name="address-contact" type="text">
-  <button type="submit">Add</button>
+  <br><br><br>
+  <button type="submit" class="btn btn-info">Add</button>
 </form>
-
+<br>
 <form action="/" method="get">
-  <button type="submit">Home</button>
+  <button type="submit" class="btn btn-info">Home</button>
 </form>
