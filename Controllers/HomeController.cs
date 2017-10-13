@@ -14,9 +14,17 @@ namespace Addresses.Controllers
       }
 
       [HttpGet("/AddressBook")]
-      public ActionResult Contact()
+      public ActionResult ViewContact()
       {
-        return View();
+        List<Contact> allContact = Contact.GetAll();
+        return View(allContact);
+      }
+
+      [HttpPost("/AddressBook/New/Contact")]
+      public ActionResult ResultContact()
+      {
+        Contact newContact = new Contact(Request.Form["name-contact"],Request.Form["number-contact"],Request.Form["address-contact"]);
+        return View("ContactAdd");
       }
 
       [HttpGet("AddressBook/New")]
@@ -24,5 +32,12 @@ namespace Addresses.Controllers
       {
         return View();
       }
+
+      [HttpGet("AddressBook/New/Contact")]
+      public ActionResult ContactAdd()
+      {
+        return View();
+      }
+
    }
 }
