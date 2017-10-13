@@ -3,9 +3,11 @@
 {
   <h3>No contact have been added yet!</h3>
 }
-@foreach (var category in Model)
+@foreach (var contact in Model)
 {
-  /*<h3><a href='/AddressBook/@contact.GetId()'>@category.GetName()</a></h3>*/
+  <h3><a href='/AddressBook/@contact.GetId()'>@contact.GetName()</a></h3>
 }
 <p><a href='/'>Back home</a></p>
-<p><a href='/AddressBook/Clear'>Clear the Form</p>
+<form action="/AddressBook/Clear" method="post">
+  <button type="submit" name="button">Clear All Tasks</button>
+</form>

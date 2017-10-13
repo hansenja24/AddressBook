@@ -39,7 +39,7 @@ namespace Addresses.Controllers
         return View();
       }
 
-      [HttpGet("AddressBook/Clear")]
+      [HttpPost("AddressBook/Clear")]
       public ActionResult ClearForms()
       {
         Contact.ClearAll();
