@@ -1,6 +1,6 @@
 <h1>Add a Contact</h1>
 <p>Add a new contact here:</p>
-<form action="/AddressBook/New/Contact" method="post">
+<form action="/AddressBook/New/Contact" method="pots">
   <label for="name-contact">Name: </label>
   <input id="name-contact" name="name-contact" type="text">
   <label for="number-contact">Phone Number: </label>
@@ -9,4 +9,7 @@
   <input id="address-contact" name="address-contact" type="text">
   <button type="submit">Add</button>
 </form>
-<p><a href="/">Back home</a></p>
+
+<form action="/" method="get">
+  <button type="submit">Home</button>
+</form>

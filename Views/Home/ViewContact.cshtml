@@ -7,7 +7,11 @@
 {
   <h3><a href='/AddressBook/@contact.GetId()'>@contact.GetName()</a></h3>
 }
-<p><a href='/'>Back home</a></p>
+
+<form action="/" method="get">
+  <button type="submit">Home</button>
+</form>
+
 <form action="/AddressBook/Clear" method="post">
   <button type="submit" name="button">Clear All Tasks</button>
 </form>

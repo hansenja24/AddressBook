@@ -46,5 +46,12 @@ namespace Addresses.Controllers
         return View();
       }
 
+      [HttpGet("/AddressBook/{id}")]
+        public ActionResult ContactDetail(int id)
+        {
+          Contact contact = Contact.Find(id);
+          return View(contact);
+        }
+
    }
 }
